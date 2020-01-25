@@ -36,6 +36,7 @@ Here's some guidelines for a well structured monolith:
 - Framework that allows for well organized modularization of the code.  This can be simple Symphony packages, Apex packages, or a wide array of other options, allowing developers to work in isolation on different aspects of the system, but in a uniformed environment, providing proper separation of duties.
 - Efficient events / jobs messaging router.  Basically all actions within the software should be handled via a messaging router allowing for scalability with a clear separation between front-end and back-end processes.
 - Ensure the messaging router is configurable, meaning the ability to define which subsets of messages get handled by which back-end server instances allowing the system to scale with precision.  For example, you should be able to setup multiple back-end server instances, then configure the router so those instances only handle a certain set of messages allowing you to isolate and scale specific operations within your system as desired.  
+- Maintain a separate change log for all modifications to interfaces, and ensure all developers on the team are immediately notified upon modifications to interfaces.
 - This doesn't get mentioned enough, but spend time on your database schema.  A clean and well structured database architecture is insturmental to the success of your technical operation, so please don't discount its importance.
 - Version control and a proper CI pipeline.  Once code is developed and tested, you need a way to deploy it across all server instances.  This can even be as quick and dirty as some rsync commands in a shell script, but there are better solutions out there.
 
@@ -65,5 +66,15 @@ Although this article will probably lead you to believe otherwise, I do actually
 This article is geared towards folks who are currently debating whether or not to go the micro services route, and if you are having that debate, the answer more than likely is no.  When the time comes where a micro services architecture will be of benefit to your operation, it will be glaringly obvious without much of a debate.
 
 I know the current hype and trend is to go micro services, but I assure you just as the hype from NoSQL died down, so will the hype of micro services in the coming years.  You can already search and read many stories about micro service failures, and you can expect those stories to appear more frequently over the coming years until the hype dies down.  I write this article to urge caution with hopes you do not become one of those failures, because it could potentially cost you, big time.
+
+
+## About the Author
+
+Matt Dizak is a software entrepreneur with 19 years of high paced experience within the online software industry, and is the 
+creator of Apex, an open source PHP based software platform at (https://apex-platform.org/).  Please feel free to 
+follow me on [Twitter](https://twitter.com/ApexPlatform), [Youtube](https://www.youtube.com/channel/UCa-gT-JbroF1EIbBB7nxHHg), or feel free to e-mail 
+directly anytime at matt.dizak@gmail.com.
+
+
 
 

@@ -23,7 +23,8 @@ This changes with BCH as follows:
 
 ## Generating the SHA256 Hash
 
-Although I can't claim to know why, the hash that needs to be signed for BCH transactions is a double SHA256 hash of a concatenated with the following elements:
+Although I can't claim to know why, the hash that needs to be signed for BCH transactions is a double SHA256 hash of a concatenated string with the following elements:
+
 
 Element | Type | Notes
 ------------- |------------- |------------- 

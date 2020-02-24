@@ -31,7 +31,7 @@ Element | Type | Notes
 Version | int32_t | Will be "02000000".
 Prev Outputs Hash | Double SHA256 hash | Create a concatenated string that consists of the out points of all inputs within the tx being signed.  Each out point is (reversed txid (char32) + vin (uint32_t).  Double hash the resulting string via SHA256.
 Sequences Hash | Double SHA256 hash | A concatenated string of the sequences (generally 'ffffffff') of all inputs within the tx being signed.  Double hash the resulting string via SHA256.
-TxID | char(32) Reversed txid of the input being signed.
+TxID | char(32) | Reversed txid of the input being signed.
 Vin | uint32_t | The vin of the input being signed.
 Sig Script Length | var_int | The length of the signature script of the input being signed.
 Sig Script | uchar() | The signature script of the input being signed.
@@ -59,13 +59,13 @@ R | The R value of the signature.
 &nbsp; | 0x02 to signify the beginning of S.
 S Length | The length of the S value.
 S | The S value of the signature.
-Hash Type | The hash type, for BTC transactions this will be 0x01.  For BCH transactions though, this canges to 0x41.
+Hash Type | The hash type, for BTC transactions this will be 0x01.  For BCH transactions though, this changes to 0x41.
 
 The DER signature is still generated the exact same way as with BTC transactions, the only difference being the end of the 
-DER signature changes from 0x01 to 0x40.  That's it.
+DER signature changes from 0x01 to 0x41.  That's it.
 
 
-## Exanoke
+## Example
 
 For an example, we will be signing a transaction with the following inputs and outputs:
 
@@ -126,7 +126,7 @@ Some notes regarding the above values.
 - The 'Sequences Hash' is a double SHA256 hash of the string: `ffffffffffffffff`.
 - The 'Outputs Hash' is a double SHA256 hash of all outputs within the tx, which is: `f0490200000000001976a914d72400b0f606548e1a618b150388cfac371f243c88ac4c4f0000000000001976a91407bd88b6baf048869b5a8f41e479e470271f776988ac`
 
-You then generate a double SHA256 hash of the above large string, and as an end results will have:
+You then generate a double SHA256 hash of the above large string, and as an end result will have:
 
 `92550cb93bc172642437be5c4ef234edddcee133b74dbe83cd00a462f6e71b49`
 

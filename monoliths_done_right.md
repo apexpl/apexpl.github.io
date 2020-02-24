@@ -71,8 +71,8 @@ I know the current hype and trend is to go micro services, but I assure you just
 ## About the Author
 
 Matt Dizak is a software entrepreneur with 19 years of high paced experience within the online software industry, and is the 
-creator of Apex, an open source PHP based software platform at [https://apex-platform.org/](https://apex-platform.org/).  Please feel free to 
-follow me on [Twitter](https://twitter.com/ApexPlatform), [Youtube](https://www.youtube.com/channel/UCif-Ix-hUt1OKqTkPilwmFA), or feel free to e-mail 
+creator of Apex, an open source PHP based software platform at [https://apexpl.io/](https://apexpl.io/).  Please feel free to 
+follow me on [Twitter](https://twitter.com/ApexPlatform), [Youtube](https://www.youtube.com/channel/UCXl-chb10kVE47aln-xUmog), or feel free to e-mail me 
 directly anytime at matt.dizak@gmail.com.
 
 

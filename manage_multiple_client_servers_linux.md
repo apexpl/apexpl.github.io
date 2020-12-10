@@ -41,7 +41,7 @@ directory within terminal by simply typing:
 
 `ssh clienta`
 
-This will instantly log you into the server information under the `clienta` host you specified within the `~/.ssh/config` file.
+This will instantly log you into the server with the information under the `clienta` host you specified within the `~/.ssh/config` file.
 
 
 ### Local /bin/ Directory.
@@ -55,7 +55,7 @@ Next, open the `~/.profile` file in a text editor by running the command:
 
 `nano $HOME/.profile`
 
-Scroll down to the very bottom of the file, and add the following lines by pressing Ctrl+Shift+V:
+Scroll down to the very bottom of the file, and add the following lines by copying them to your clipboard, then within terminal by pressing Ctrl+Shift+V:
 
 ~~~
 if [ -d "$HOME/bin" ] ; then
@@ -99,7 +99,8 @@ Save and close the file by pressing Ctrl+X, followed by the "Y" and Enter keys. 
 `chmod 0755 $HOME/bin/mount_client`
 
 Now any time you need to mount to client A's remote server to transfer files to / from it, from any directory within terminal you can simply type `mount_clienta`, and the remote server mounted 
-at the remote /var/www/ directory will be available to you via the `$HOME/mnt/clienta` directory.
+at the /var/www/ directory will be available to you via the `$HOME/mnt/clienta` directory.  You can then begin using that directory just as 
+if it was a local directory on your computer.
 
 
 ### Conclusion
